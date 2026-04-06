@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pessoas</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+<h2 class="mb-4">Pessoas</h2>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nome</th>
+<th>CPF</th>
+<th>Email</th>
+<th>Data Nasc.</th>
+<th>Cidade</th>
+<th>Ocupação</th>
+</tr>
+</thead>
+<tbody>
+{% for pessoa in pessoas %}
+<tr>
+<td>{{ pessoa.nome }}</td>
+<td>{{ pessoa.cpf }}</td>
+<td>{{ pessoa.email }}</td>
+<td>{{ pessoa.data_nasc }}</td>
+<td>{{ pessoa.cidade }}</td>
+<td>{{ pessoa.ocupacao }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
