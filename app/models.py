@@ -131,6 +131,7 @@ class Matricula(models.Model):
     instituicao = models.ForeignKey(InstituicaoEnsino, on_delete=models.CASCADE, verbose_name="Instituição de Ensino")
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE, verbose_name="Curso")
     pessoa = models.ForeignKey(Pessoa, on_delete=models.CASCADE, verbose_name="Pessoa")
+    turma = models.ForeignKey(Turma, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return f"{self.pessoa} - {self.curso}"
